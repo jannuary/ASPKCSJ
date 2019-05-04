@@ -1,0 +1,135 @@
+body {
+  background: #2f313d;
+  font-family: sans-serif;
+  letter-spacing: 0.2em;
+}
+
+h2 {
+  color: #9a9dbd;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #46485c;
+  text-decoration: none;
+}
+
+.login, .title {
+  width: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -202px 0px 0px -155px;
+  background: rgba(0,0,0,0.2);
+  padding: 20px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 0px rgba(0,0,0,0.3),inset 0px 1px 0px rgba(255,255,255,0.07)
+}
+
+input[type="text"], input[type="password"] {
+  letter-spacing: 0.1em;
+  width: 250px;
+  padding: 25px 0px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  outline: none;
+  color: #9a9dbd;
+  font-size: 1em;
+}
+
+
+
+
+input[type="submit"] {
+  background: #b5cd60;
+  border: 0;
+  width: 250px;
+  height: 40px;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+input[type="submit"]:hover {
+  background: #16aa56;
+}
+
+.forgot {
+  margin-top: 30px;
+  display: block;
+  font-size: 11px;
+  text-align: center;
+  font-weight: bold;
+}
+.forgot:hover {
+  margin-top: 30px;
+  display: block;
+  font-size: 11px;
+  text-align: center;
+  font-weight: bold;
+  color: #6d7781;
+}
+
+
+
+::-webkit-input-placeholder {
+  color: #46485c;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: all 0.2s linear;
+  transform: translate(10px, 0);
+  opacity: 0;
+}
+.tip{
+  margin: 1em auto 0;
+  line-height: 1.5em;
+  color: #984646;
+  text-align: center;
+}
+
+.title > p {
+  color: aliceblue;
+  text-align: center;
+}
+
+.title > a {
+  display: block;
+  color: #8bdeb3;
+  text-align: right;
+}
+
+
+/* close button */
+.close-button {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  box-sizing: border-box;
+  line-height: 20px;
+  display: inline-block;
+  top:-10px;
+  right: 7px;
+}
+.close-button:before, .close-button:after {
+  transform: rotate(-45deg);
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  height: 9px;
+  width: 27px;
+  background-color: #fff;
+  transition: all 0.25s ease-out;
+}
+.close-button:after {
+  transform: rotate(-135deg);
+}
+.close-button:hover:before, .close-button:hover:after {
+  transform: rotate(0deg);
+}
