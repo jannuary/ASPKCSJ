@@ -75,7 +75,7 @@ public class ex extends HttpServlet {
         Data.updata(sql);
        
         
-        out.println("<head><link rel=\"stylesheet\" href=\"css/style.css\"></head><div class=\"title\"><p>"+exid+"第 "+ exn+ " 套题 </p><p>"+  sc +" 分</p><a href=\"/ks/exam.jsp\">ok</a></div>");
+        out.println("<head><link rel=\"stylesheet\" href=\"css/style.css\"></head><div class=\"title\"><p>"+exid+"第 "+ exn+ " 套题 </p><p>"+  sc +" 分</p><a href=\"exam.jsp\">ok</a></div>");
 
         // request.getRequestDispatcher("ex.jsp").forward(request, response);
     }

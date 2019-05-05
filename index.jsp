@@ -29,7 +29,7 @@
 </head>
 <body>
     <h1>欢迎来到考生系统</h1>
-    <p><a href="/ks/login.jsp">即将到登陆界面</a></p>
+    <p><a href="login.jsp">即将到登陆界面</a></p>
     <p id="t">...</p>
     <script>
         let time = 2;
@@ -41,7 +41,7 @@
         }
         t.innerHTML = str;
         if(!time--){
-            window.location.href = "/ks/login.jsp";
+            window.location.href = "login.jsp";
         }
       },1000)  
     </script>
