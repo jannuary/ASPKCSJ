@@ -30,9 +30,9 @@
 <body>
     <h1>欢迎来到考生系统</h1>
     <p><a href="/ks/login.jsp">即将到登陆界面</a></p>
-    <p id="t">.....</p>
+    <p id="t">...</p>
     <script>
-        let time = 4;
+        let time = 2;
       setInterval(()=>{
         let t = document.getElementById("t");
         let str = "";

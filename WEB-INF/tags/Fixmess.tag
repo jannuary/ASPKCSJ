@@ -21,8 +21,8 @@
 	Connection con;
 	Statement sql;
 	ResultSet rs;
-	String uri="jdbc:mysql://127.0.0.1/jspks?"+
-			"user=&password=&charaterEncoding=gb2312";
+	String uri="jdbc:mysql://127.0.0.1:"+application.getInitParameter("port")+"/jspks?"+
+		"user="+application.getInitParameter("user")+"&password="+ application.getInitParameter("password") +"&charaterEncoding=gb2312";
 	try{
 		con=DriverManager.getConnection(uri);
 		String updateCondition="update user set uname='"+uname+"',upassword='"+upassword+

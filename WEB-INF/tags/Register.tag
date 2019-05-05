@@ -26,8 +26,8 @@
 			try{
 				byte[] b=condition.getBytes("ISO-8859-1");
 				condition=new String(b);
-				String uri ="jdbc:mysql://127.0.0.1/jspks?"+
-				"user=&password=&characterEncoding=gb2312";
+				String uri ="jdbc:mysql://127.0.0.1:"+application.getInitParameter("port")+"/jspks?"+
+		"user="+application.getInitParameter("user")+"&password="+ application.getInitParameter("password") +"&charaterEncoding=gb2312";
 				con=DriverManager.getConnection(uri);
 				sql=con.createStatement();
 				sql.executeUpdate(condition);

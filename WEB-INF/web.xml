@@ -38,4 +38,17 @@
         <artifactId>jst1</artifactId>
         <version>1.2</version>
     </dependency>
+
+    <context-param>
+    <param-name>password</param-name>
+    <param-value>passwd</param-value>
+    </context-param>
+    <context-param>
+    <param-name>user</param-name>
+    <param-value>userName</param-value>
+    </context-param>
+    <context-param>
+    <param-name>port</param-name>
+    <param-value>3306</param-value>
+    </context-param>
 </web-app>

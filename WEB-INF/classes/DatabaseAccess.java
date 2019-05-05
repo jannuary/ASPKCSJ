@@ -4,16 +4,22 @@ import java.util.*;
 public class DatabaseAccess{
     // JDBC 驱动名及数据库 URL
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://localhost:3306/jspks";
-
+    
     // 数据库的用户名与密码，需要根据自己的设置
-    static final String USER = "";
-    static final String PASS = "";
+    String PORT = "3306";
+    String USER = "";
+    String PASS = "";
+
+    String DB_URL = "jdbc:mysql://localhost:"+ this.PORT +"/jspks";
 
     Connection conn = null;
     Statement stmt = null;
 
-    public DatabaseAccess() {
+    public DatabaseAccess(String port, String user, String password) {
+        this.PORT = port;
+        this.USER = user;
+        this.PASS = password;
+        this.DB_URL = "jdbc:mysql://localhost:"+ this.PORT +"/jspks";
     }
 
     public Map<String, ArrayList<String>> sel(String sql){

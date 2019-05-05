@@ -29,8 +29,8 @@
 	}
 	else{
 		boolean boo=(uid.length()>0)&&(upassword.length()>0);
-		try{String uri="jdbc:mysql://127.0.0.1/jspks?"+
-		"user=&password=&charaterEncoding=gb2312";
+		try{String uri="jdbc:mysql://127.0.0.1:"+application.getInitParameter("port")+"/jspks?"+
+		"user="+application.getInitParameter("user")+"&password="+ application.getInitParameter("password") +"&charaterEncoding=gb2312";
 		con=DriverManager.getConnection(uri);
 		String condition = "select * from user where uid='"+uid+"'and upassword='"+upassword+"'and uname='"+uname+"'";
 		sql=con.createStatement();

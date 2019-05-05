@@ -106,16 +106,23 @@
         }
     </style>
 </head>
-
 <body>
     <!--
 JDBC 驱动名及数据库 URL 
 数据库的用户名与密码，需要根据自己的设置
 useUnicode=true&characterEncoding=utf-8 防止中文乱码
  -->
+    <%
+            String user = application.getInitParameter("user");
+            pageContext.setAttribute("user", user);
+            String password = application.getInitParameter("password");
+            pageContext.setAttribute("password", password);
+            String port = application.getInitParameter("port");
+            pageContext.setAttribute("port", port);
+        %>
     <sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
-        url="jdbc:mysql://localhost:3306/jspks?useUnicode=true&characterEncoding=utf-8" user=""
-        password="" />
+        url="jdbc:mysql://localhost:${port}/jspks?useUnicode=true&characterEncoding=utf-8" user="${user}"
+        password="${password}" />
 
     <sql:query dataSource="${snapshot}" var="result">
          <%=table%>;
